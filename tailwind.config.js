@@ -9,7 +9,8 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: { animation: ['hover', 'focus'] },
+    animation: ['responsive', 'motion-safe', 'motion-reduce'],
   },
   plugins: [],
 }

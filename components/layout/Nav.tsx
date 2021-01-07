@@ -31,7 +31,7 @@ export default function Nav() {
               <p className="ml-2 font-semibold">Zulnabil A.</p>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
+              <div className="ml-10 flex items-baseline space-x-6">
                 {menus.map((menu) => (
                   <Link key={menu.path} href={menu.path}>
                     <a
