@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>About</title>
+        <title>Zulnabil | About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -5,7 +5,7 @@ export default function Blogs() {
   return (
     <div>
       <Head>
-        <title>Blogs</title>
+        <title>Zulnabil | Blogs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

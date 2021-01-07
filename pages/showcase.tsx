@@ -5,7 +5,7 @@ export default function Showcase() {
   return (
     <div>
       <Head>
-        <title>Showcase</title>
+        <title>Zulnabil | Showcase</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

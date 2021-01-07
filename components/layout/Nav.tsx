@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { useTheme } from 'next-themes'
 
 import menus from 'constants/menus'
@@ -32,17 +33,17 @@ export default function Nav() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 {menus.map((menu) => (
-                  <a
-                    key={menu.path}
-                    href={menu.path}
-                    className={`${
-                      router.pathname === menu.path
-                        ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
-                        : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
-                    } px-3 py-2 rounded-md text-sm font-medium`}
-                  >
-                    {menu.name}
-                  </a>
+                  <Link key={menu.path} href={menu.path}>
+                    <a
+                      className={`${
+                        router.pathname === menu.path
+                          ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
+                          : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
+                      } px-3 py-2 rounded-md text-sm font-medium`}
+                    >
+                      {menu.name}
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -96,17 +97,17 @@ export default function Nav() {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {menus.map((menu) => (
-            <a
-              key={menu.path}
-              href={menu.path}
-              className={`${
-                router.pathname === menu.path
-                  ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
-                  : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
-              } block px-3 py-2 rounded-md text-base font-medium`}
-            >
-              {menu.name}
-            </a>
+            <Link key={menu.path} href={menu.path}>
+              <a
+                className={`${
+                  router.pathname === menu.path
+                    ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
+                    : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
+                } block px-3 py-2 rounded-md text-base font-medium`}
+              >
+                {menu.name}
+              </a>
+            </Link>
           ))}
         </div>
       </div>
