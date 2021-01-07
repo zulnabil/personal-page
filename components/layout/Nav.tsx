@@ -93,7 +93,7 @@ export default function Nav() {
       <div
         className={`${
           !isMenuOpen ? 'invisible transform opacity-0 scale-95' : 'visible transform opacity-100 scale-100'
-        } md:hidden absolute w-full border-b border-gray-300 dark:border-gray-700 bg-gray-200 bg-opacity-50 bg-blur-1 dark:bg-gray-800 transition ease-out duration-100`}
+        } md:hidden absolute z-50 w-full border-b border-gray-300 dark:border-gray-700 bg-gray-200 bg-opacity-50 bg-blur-1 dark:bg-gray-800 transition ease-out duration-100`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {menus.map((menu) => (
