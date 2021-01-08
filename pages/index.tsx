@@ -41,7 +41,7 @@ export default function Home() {
               using ReactJS, SvelteJS, and NodeJS.
             </p>
             <div className="my-6 flex items-center">
-              <Button primary className="mx-3 px-6 py-3 uppercase font-normal">
+              <Button onClick={handleRedirect('/connect')} primary className="mx-3 px-6 py-3 uppercase font-normal">
                 Connect
               </Button>
               <div className="inline-block mr-0.5 w-0 h-8 border-solid border-r border-gray-400"></div>
