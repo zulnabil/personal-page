@@ -12,8 +12,8 @@ const menus = [
     path: '/blogs'
   },
   {
-    name: 'Contact',
-    path: '/contact'
+    name: 'Connect',
+    path: '/connect'
   },
 ]
 
