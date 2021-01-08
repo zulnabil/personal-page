@@ -12,10 +12,6 @@ const menus = [
     path: '/blogs'
   },
   {
-    name: 'About',
-    path: '/about'
-  },
-  {
     name: 'Contact',
     path: '/contact'
   },
