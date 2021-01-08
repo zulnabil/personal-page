@@ -1,10 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import Layout from 'components/layout/Layout'
 import Button from 'components/buttons/Button'
 
 export default function Home() {
+  const router = useRouter()
+
+  const handleRedirect = (href) => (e) => {
+    e.preventDefault()
+    router.push(href)
+  }
+
   return (
     <div>
       <Head>
@@ -32,9 +40,13 @@ export default function Home() {
               a <span className="font-semibold">Frontend Developer</span> in Indonesia 🇮🇩. I specialize in Javascript
               using ReactJS, SvelteJS, and NodeJS.
             </p>
-            <div className="m-2">
-              <Button primary className="my-4 px-10 py-6 uppercase font-normal">
-                Connect with me
+            <div className="my-6 flex items-center">
+              <Button primary className="mx-3 px-6 py-3 uppercase font-normal">
+                Connect
+              </Button>
+              <div className="inline-block mr-0.5 w-0 h-8 border-solid border-r border-gray-400"></div>
+              <Button onClick={handleRedirect('/showcase')} className="mx-3 px-6 py-3 uppercase font-normal">
+                Showcase
               </Button>
             </div>
           </div>
