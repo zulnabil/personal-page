@@ -27,7 +27,7 @@ export default function Connect() {
         <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Blogs</p>
         <div className="mt-10 mx-auto max-w-lg">
           {blogs.map((blog) => (
-            <div className="w-full overflow-hidden rounded border bg-white shadow">
+            <div className="w-full overflow-hidden rounded-lg border bg-white shadow-lg">
               <div className="relative">
                 <div
                   className="h-48 bg-cover bg-no-repeat bg-center"
@@ -46,7 +46,7 @@ export default function Connect() {
               </div>
               <div className="p-3">
                 <h3 className="mr-10 text-sm truncate-2nd">
-                  <a className="hover:text-blue-500" href={blog.link} target="_blank">
+                  <a className="hover:text-yellow-400" href={blog.link} target="_blank">
                     {blog.title}
                   </a>
                 </h3>
