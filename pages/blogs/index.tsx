@@ -2,8 +2,17 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Layout from 'components/layout/Layout'
 
+interface Blog {
+  title: string
+  thumbnail: string
+  categories: string[]
+  link: string
+  author: string
+  pubDate: string
+}
+
 export default function Connect() {
-  const [blogs, setBlogs] = useState([])
+  const [blogs, setBlogs] = useState<Blog[]>([])
 
   useEffect(() => {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@zulnabil')
@@ -13,8 +22,6 @@ export default function Connect() {
         setBlogs(res)
       })
   }, [])
-
-  console.log(blogs)
 
   return (
     <div>
@@ -26,7 +33,7 @@ export default function Connect() {
       <Layout>
         <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Blogs</p>
         <div className="mt-10 mx-auto max-w-lg">
-          {blogs.map((blog) => (
+          {(blogs as Blog[]).map((blog) => (
             <div className="w-full overflow-hidden rounded-lg border bg-white shadow-lg">
               <div className="relative">
                 <div
