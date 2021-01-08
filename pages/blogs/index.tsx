@@ -34,7 +34,7 @@ export default function Connect() {
         <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Blogs</p>
         <div className="mt-10 mx-auto max-w-lg">
           {(blogs as Blog[]).map((blog) => (
-            <div className="w-full overflow-hidden rounded-lg border bg-white shadow-lg">
+            <div className="w-full overflow-hidden rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
               <div className="relative">
                 <div
                   className="h-48 bg-cover bg-no-repeat bg-center"
@@ -58,7 +58,7 @@ export default function Connect() {
                   </a>
                 </h3>
 
-                <p className="mt-2 text-xs text-gray-500">
+                <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
                   {blog.author} • {blog.pubDate}
                 </p>
               </div>

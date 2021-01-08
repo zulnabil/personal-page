@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import Layout from 'components/layout/Layout'
 
@@ -13,7 +12,7 @@ export default function Showcase() {
 
       <Layout>
         <div className="flex items-center justify-center">
-          <Image className="w-50 h-50" src="/assets/img/show-memoji.png" alt="smile-memoji" width={80} height={80} />
+          <img src="/assets/img/show-memoji.png" alt="smile-memoji" width={80} height={80} />
           <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Showcase</p>
         </div>
         <section className="my-10">

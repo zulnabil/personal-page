@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import Layout from 'components/layout/Layout'
@@ -24,7 +23,7 @@ export default function Home() {
         <section className="flex justify-center items-center text-center">
           <div className="flex flex-col justify-center items-center">
             <div className="p-1 rounded-full bg-yellow-100 motion-safe:animate-bounce">
-              <Image
+              <img
                 className="transform -translate-x-1 translate-y-2"
                 src="/assets/img/smile-memoji.png"
                 alt="smile-memoji"
