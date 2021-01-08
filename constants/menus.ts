@@ -13,7 +13,7 @@ const menus = [
   },
   {
     name: 'Connect',
-    path: '/connect'
+    path: '/contact'
   },
 ]
 

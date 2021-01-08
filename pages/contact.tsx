@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Layout from 'components/layout/Layout'
 
-export default function Contact() {
+export default function Connect() {
   return (
     <div>
       <Head>
-        <title>Zulnabil | Contact</title>
+        <title>Zulnabil | Connect with me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>Contact</Layout>
+      <Layout>Connect with me</Layout>
     </div>
   )
 }
