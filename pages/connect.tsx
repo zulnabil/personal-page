@@ -7,6 +7,16 @@ export default function Connect() {
       <Head>
         <title>Zulnabil | Connect with me</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content="https://zull.my.id/connect" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Zulnabil | Connect with me" />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          property="og:description"
+          content="a Frontend Developer in Indonesia 🇮🇩. I specialize in Javascript
+          using ReactJS, SvelteJS, and NodeJS. Building web apps, web mobile, landing page, and mobile apps."
+        />
+        <meta property="og:image" content="https://zull.my.id/assets/img/smile-memoji.png" />
       </Head>
 
       <Layout>
