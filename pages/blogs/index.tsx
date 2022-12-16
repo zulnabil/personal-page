@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Layout from 'components/layout/Layout'
+import seo from 'constants/seo'
 
 interface Blog {
   title: string
@@ -25,6 +26,9 @@ export default function Connect() {
 
   return (
     <Layout title="Blogs">
+      <Head>
+        <link href={seo.url + '/blogs'} rel="canonical"></link>
+      </Head>
       <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Blogs</p>
       <div className="mt-10 mx-auto max-w-lg">
         {(blogs as Blog[]).map((blog) => (

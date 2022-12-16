@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import Layout from 'components/layout/Layout'
+import seo from 'constants/seo'
 
 export default function Connect() {
   return (
     <Layout title="Connect with me">
+      <Head>
+        <link href={seo.url + '/connect'} rel="canonical"></link>
+      </Head>
       <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Connect with me</p>
       <div className="mt-10 mx-auto max-w-xs text-center">
         <div className="my-5 flex items-center hover:text-yellow-400">
