@@ -20,7 +20,8 @@
     "noEmit": true,
     "jsx": "preserve",
     "baseUrl": "./",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "incremental": true
   },
   "include": [
     "./"
