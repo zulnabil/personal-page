@@ -28,6 +28,7 @@ export default function Layout({ title, description = seo.description, children,
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={seo.image} />
+        <link href={seo.url} rel="canonical"></link>
       </Head>
       <Nav />
       <main className={`container mx-auto px-4 py-6 sm:px-0 ${className}`}>{children}</main>
