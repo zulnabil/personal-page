@@ -3,6 +3,10 @@ import { useRouter } from 'next/router'
 
 import Layout from 'components/layout/Layout'
 import Button from 'components/buttons/Button'
+import IconGithub from 'components/icons/IconGithub'
+import IconLinkedin from 'components/icons/IconLinkedin'
+import IconTelegram from 'components/icons/IconTelegram'
+import Image from 'next/image'
 
 export default function Home() {
   const router = useRouter()
@@ -13,54 +17,42 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <Head>
-        <title>Zulnabil's page</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:url" content="https://zull.my.id" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Zulnabil's page" />
-        <meta name="twitter:card" content="summary" />
-        <meta
-          property="og:description"
-          content="a Frontend Developer in Indonesia 🇮🇩. I specialize in Javascript
-          using ReactJS, SvelteJS, and NodeJS. Building web apps, web mobile, landing page, and mobile apps."
-        />
-        <meta property="og:image" content="https://zull.my.id/assets/img/smile-memoji.png" />
-      </Head>
-
-      <Layout>
-        <section className="flex justify-center items-center text-center">
-          <div className="flex flex-col justify-center items-center">
-            <div className="p-1 rounded-full bg-yellow-100 motion-safe:animate-bounce">
-              <img
-                className="transform -translate-x-1 translate-y-2"
-                src="/assets/img/smile-memoji.png"
-                alt="smile-memoji"
-                width={120}
-                height={120}
-              />
-            </div>
-            <p className="my-2 font-semibold text-xl">Hi! I'm Zul ✌️</p>
-            <p className="md:my-6 my-4 max-w-screen-md text-center font-medium md:text-6xl text-4xl tracking-tight">
-              Building web apps, web mobile, landing page, and mobile apps.
-            </p>
-            <p className="my-4 max-w-sm tracking-tight">
-              a <span className="font-semibold">Frontend Developer</span> in Indonesia 🇮🇩. I specialize in Javascript
-              using ReactJS, SvelteJS, and NodeJS.
-            </p>
-            <div className="my-6 flex items-center">
-              <Button onClick={handleRedirect('/connect')} primary className="mx-3 px-6 py-3 uppercase font-normal">
-                Connect
-              </Button>
-              <div className="inline-block mr-0.5 w-0 h-8 border-solid border-r border-gray-400"></div>
-              <Button onClick={handleRedirect('/showcase')} className="mx-3 px-6 py-3 uppercase font-normal">
-                Showcase
-              </Button>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    </div>
+    <Layout className="text-center" title="Front">
+      <div className="flex flex-col justify-center items-center md:pt-8 pt-0">
+        <div className="p-1 rounded-full bg-yellow-100 motion-safe:animate-bounce">
+          <Image
+            className="transform -translate-x-1 translate-y-2"
+            src="/assets/img/smile-memoji.png"
+            alt="smile-memoji"
+            width={120}
+            height={120}
+            priority
+          />
+        </div>
+        <p className="mt-2 font-semibold text-xl">Zulnabil Personal Site ✌️</p>
+        <h1 className="md:my-6 my-4 max-w-screen-md text-center font-medium md:text-5xl text-4xl tracking-tight">
+          Building web apps, web mobile, web platform and mobile apps.
+        </h1>
+        <h2 className="mb-8 max-w-sm tracking-tight">
+          a <span className="font-semibold">Frontend Developer</span> in Indonesia 🇮🇩. He specialized in Javascript
+          modern using ReactJS, SvelteJS, and NodeJS.
+        </h2>
+        <div className="flex gap-8 my-4">
+          <a
+            href="https://github.com/zulnabil"
+            target="_blank"
+            className="hover:text-gray-700 dark:hover:text-gray-300"
+          >
+            <IconGithub />
+          </a>
+          <a href="https://linkedin.com/in/zulnabil" target="_blank" className="hover:text-blue-600">
+            <IconLinkedin />
+          </a>
+          <a href="https://t.me/zulnabil" target="_blank" className="hover:text-sky-600">
+            <IconTelegram />
+          </a>
+        </div>
+      </div>
+    </Layout>
   )
 }
