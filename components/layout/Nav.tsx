@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
 
 import menus from 'constants/menus'
+import { useTheme } from 'hooks/useTheme.hook'
 
 export default function Nav() {
-  const { theme, setTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme()
   const router = useRouter()
   const [isMounted, setMounted] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false)
-  const [isDarkMode, setDarkMode] = useState<boolean>(false)
 
   useEffect(() => {
     setMounted(true)
@@ -18,7 +17,7 @@ export default function Nav() {
 
   const switchTheme = () => {
     if (isMounted) {
-      setTheme(theme === 'light' ? 'dark' : 'light')
+      toggleTheme(theme === 'light' ? 'dark' : 'light')
     }
   }
   return (
@@ -33,16 +32,16 @@ export default function Nav() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
                 {menus.map((menu) => (
-                  <Link key={menu.path} href={menu.path}>
-                    <a
-                      className={`${
-                        router.pathname === menu.path
-                          ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
-                          : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
-                      } px-3 py-2 rounded-md text-sm font-medium`}
-                    >
-                      {menu.name}
-                    </a>
+                  <Link
+                    key={menu.path}
+                    href={menu.path}
+                    className={`${
+                      router.pathname === menu.path
+                        ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
+                        : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
+                    } px-3 py-2 rounded-md text-sm font-medium`}
+                  >
+                    {menu.name}
                   </Link>
                 ))}
               </div>
@@ -74,7 +73,7 @@ export default function Nav() {
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               <svg
                 className="hidden h-6 w-6"
@@ -84,7 +83,7 @@ export default function Nav() {
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -97,16 +96,16 @@ export default function Nav() {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {menus.map((menu) => (
-            <Link key={menu.path} href={menu.path}>
-              <a
-                className={`${
-                  router.pathname === menu.path
-                    ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
-                    : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
-                } block px-3 py-2 rounded-md text-base font-medium`}
-              >
-                {menu.name}
-              </a>
+            <Link
+              key={menu.path}
+              href={menu.path}
+              className={`${
+                router.pathname === menu.path
+                  ? 'bg-gray-800 text-white dark:bg-white dark:text-gray-800'
+                  : 'text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white'
+              } block px-3 py-2 rounded-md text-base font-medium`}
+            >
+              {menu.name}
             </Link>
           ))}
         </div>
