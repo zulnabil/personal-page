@@ -15,7 +15,7 @@ export default function Layout({ title, description = seo.description, children,
     <>
       <Head>
         <title>{metaTitle}</title>
-        <meta property="description" content={description} />
+        <meta name="description" content={description} />
         <meta content="website" property="og:type" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={description} />
