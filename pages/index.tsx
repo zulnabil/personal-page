@@ -6,10 +6,15 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
+import seo from 'constants/seo'
 
 export default function Home({ posts }) {
   return (
     <Layout className="text-center" title="Front">
+      <Head>
+        <link href={seo.url} rel="canonical"></link>
+      </Head>
       <div className="flex flex-col justify-center items-center md:pt-8 pt-0 pb-16">
         <div className="p-1 rounded-full bg-yellow-100 motion-safe:animate-bounce">
           <Image

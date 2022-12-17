@@ -14,36 +14,34 @@ export default function DetailBlog({ frontmatter, content }) {
   const { slug } = router.query
   const handleBack = useCallback(router.back, [])
   return (
-    <>
+    <Layout title={frontmatter.title} description={frontmatter.description}>
       <Head>
-        <link href={seo.url + '/blog/' + slug} rel="canonical" />
+        <link href={seo.url + '/blog/' + slug} rel="canonical"></link>
       </Head>
-      <Layout title={frontmatter.title} description={frontmatter.description}>
-        <article className="prose md:prose-lg lg:prose-xl dark:prose-invert py-4 m-auto">
-          <Button className="mb-4 rounded-md text-sm" onClick={handleBack}>
-            ← Back
-          </Button>
-          <ReactMarkdown
-            components={{
-              img: ({ node, alt, src, height, width, placeholder, ...props }) => (
-                <Image
-                  {...props}
-                  src={src || ''}
-                  alt={alt || ''}
-                  height={300}
-                  width={500}
-                  placeholder={(placeholder as 'blur' | 'empty') || 'empty'}
-                  className="m-auto"
-                  title={alt || ''}
-                />
-              ),
-            }}
-          >
-            {content}
-          </ReactMarkdown>
-        </article>
-      </Layout>
-    </>
+      <article className="prose md:prose-lg lg:prose-xl dark:prose-invert py-4 m-auto">
+        <Button className="mb-4 rounded-md text-sm" onClick={handleBack}>
+          ← Back
+        </Button>
+        <ReactMarkdown
+          components={{
+            img: ({ node, alt, src, height, width, placeholder, ...props }) => (
+              <Image
+                {...props}
+                src={src || ''}
+                alt={alt || ''}
+                height={300}
+                width={500}
+                placeholder={(placeholder as 'blur' | 'empty') || 'empty'}
+                className="m-auto"
+                title={alt || ''}
+              />
+            ),
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </article>
+    </Layout>
   )
 }
 
