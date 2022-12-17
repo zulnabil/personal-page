@@ -9,11 +9,11 @@ export default function Showcase() {
   return (
     <Layout title="Showcase">
       <Head>
-        <link href={seo.url + '/showcase'} rel="canonical"></link>
+        <link href={seo.url + '/showcase'} rel="canonical" />
       </Head>
       <div className="flex items-center justify-center">
         <Image src="/assets/img/show-memoji.png" alt="smile-memoji" width={80} height={80} priority />
-        <p className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Showcase</p>
+        <h1 className="md:my-6 my-4 text-center font-medium md:text-6xl text-4xl tracking-tight">Showcase</h1>
       </div>
       <div className="my-10 grid grid-cols-2 gap-8">
         {projects.map((project) => (

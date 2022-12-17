@@ -1,19 +1,19 @@
 const menus = [
   {
     name: 'Front',
-    path: '/'
+    path: '/',
   },
   {
-    name: 'Showcase',
-    path: '/showcase'
+    name: 'Blog',
+    path: '/blog',
   },
-  {
-    name: 'Blogs',
-    path: '/blogs'
-  },
+  // {
+  //   name: 'Showcase',
+  //   path: '/showcase',
+  // },
   {
     name: 'Connect',
-    path: '/connect'
+    path: '/connect',
   },
 ]
 
